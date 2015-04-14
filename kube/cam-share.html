@@ -6,26 +6,40 @@
         <span><h3 style="color:#FFFFFF"class="right">16:42&nbsp</h3></span>
     </div>
 </div>
-
 		<div class="units-row units-split">
    			<div class=" topboxGal unit-50">
-                <button id="button-main" class="fa fa-sort-asc fa-5x"></button>
-    	       <button id="button-ajax" class="fa fa-exclamation fa-5x"></button>
+                <button class="btn-share fa fa-sort-asc fa-5x"></button>
+                <button class="btn-share fa fa-exclamation fa-5x"></button>
    			</div>
             <div class=" topboxGal unit-50">
-                <button id="button-main" class="fa fa-bomb fa-5x"></button>
-    	       <button id="button-ajax" class="fa fa-cart-plus fa-5x"></button>
+                <button class=" btn-share fa fa-bomb fa-5x"></button>
+                <button class=" btn-share fa fa-cart-plus fa-5x"></button>
    			</div>
-		</div>
+
+    </div>
 
 
     <script>
-
+        
+        $(".btn-share").click(function() {
+            
+            $.ajax({
+					type: "GET",
+					url: "cam-share-cancel.html",
+					dataType: "html",
+					success: function(html){
+						$("#replace-screen").html(html);
+						var a = $(".end-screen").position();
+						$(".end-screen").height(offset);
+					},
+					error: function(x1,x2,x3){
+					}
+				});
+		});
         $(".btn-red").click(function() {
             
-            $("#text").empty().html("<div class='text-centered'><h2 >O pedido do drone foi cancelado.</h2></div>");
-            $(".btn-red").hide()
-            $(".fa-times").hide()
+            $("#change").empty().html(a);
 		});
+        
 
 	</script>
