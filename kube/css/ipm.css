@@ -82,3 +82,12 @@ body{
     background:#DADADA;
     border:0px;
 }
+
+.foto-background{
+    background-image: url(../img/dance.jpg);
+    backround-size: contain
+}
+
+.transparent-gray{
+    background-color: rgba(224,227,229,0,55);   
+}
